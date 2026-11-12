@@ -1,0 +1,15 @@
+[project]
+name = "transitous-mcp"
+version = "0.1.0"
+description = "MCP journey planner from Veverská Bítýška náměstí"
+requires-python = ">=3.13"
+dependencies = ["mcp>=2.3,<3", "httpx>=0.28,<1", "pydantic-settings>=2.12,<3", "uvicorn>=0.35,<1"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+pythonpath = ["."]
